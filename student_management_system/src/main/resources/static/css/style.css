@@ -1,0 +1,294 @@
+/* ==========================================
+        GLOBAL
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef2f7;
+}
+
+/* ==========================================
+        SIDEBAR
+========================================== */
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:260px;
+    height:100vh;
+    background:#1f2d3d;
+    color:#fff;
+    overflow-y:auto;
+}
+
+/* Logo */
+
+.logo{
+    text-align:center;
+    padding:25px 15px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.logo h2{
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.logo p{
+    font-size:13px;
+    color:#d7d7d7;
+}
+
+/* Menu */
+
+.sidebar a{
+    display:block;
+    padding:18px 25px;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+.sidebar a:hover{
+    background:#34495e;
+    padding-left:35px;
+}
+
+.sidebar .active{
+    background:#3498db;
+}
+
+/* ==========================================
+        CONTENT
+========================================== */
+
+.content{
+    margin-left:260px;
+    padding:35px;
+}
+
+.content h1{
+    font-size:45px;
+    color:#22313f;
+    margin-bottom:30px;
+}
+
+/* ==========================================
+        DASHBOARD CARDS
+========================================== */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.card{
+    border-radius:15px;
+    color:white;
+    text-align:center;
+    padding:35px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:55px;
+    font-weight:bold;
+}
+
+/* Card Colors */
+
+.students{
+    background:#3498db;
+}
+
+.faculty{
+    background:#2ecc71;
+}
+
+.courses{
+    background:#9b59b6;
+}
+
+.attendance{
+    background:#f39c12;
+}
+
+.marks{
+    background:#e74c3c;
+}
+
+.departments{
+    background:#1abc9c;
+}
+
+/* ==========================================
+        FORM
+========================================== */
+
+.form-container{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+    margin-bottom:35px;
+}
+
+.form-container h2{
+    margin-bottom:20px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.form-grid input,
+.form-grid select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.form-grid input:focus,
+.form-grid select:focus{
+    outline:none;
+    border:1px solid #3498db;
+}
+
+/* ==========================================
+        BUTTONS
+========================================== */
+
+button{
+    background:#3498db;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#2980b9;
+}
+
+.edit-btn{
+    background:#27ae60;
+    margin-right:8px;
+}
+
+.edit-btn:hover{
+    background:#1f8c4b;
+}
+
+.delete-btn{
+    background:#e74c3c;
+}
+
+.delete-btn:hover{
+    background:#c0392b;
+}
+
+/* ==========================================
+        TABLE
+========================================== */
+
+.table-container{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+.table-container h2{
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#3498db;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+table td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f7f7f7;
+}
+
+table tr:hover{
+    background:#edf5ff;
+}
+
+/* ==========================================
+        RESPONSIVE
+========================================== */
+
+@media(max-width:1100px){
+
+    .dashboard{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .form-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    .content{
+        margin-left:0;
+    }
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+}

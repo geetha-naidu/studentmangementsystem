@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Marks Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>SMS</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+
+    <a href="students.html">🎓 Students</a>
+
+    <a href="faculty.html">👨‍🏫 Faculty</a>
+
+    <a href="courses.html">📚 Courses</a>
+
+    <a href="attendance.html">📅 Attendance</a>
+
+    <a href="marks.html" class="active">📝 Marks</a>
+
+</div>
+
+<div class="content">
+
+    <h1>Marks Management</h1>
+
+    <div class="form-container">
+
+        <h2>Add Student Marks</h2>
+
+        <div class="form-grid">
+
+            <input
+                    type="number"
+                    id="studentId"
+                    placeholder="Student ID">
+
+            <input
+                    type="number"
+                    id="courseId"
+                    placeholder="Course ID">
+
+            <input
+                    type="number"
+                    id="internalMarks"
+                    placeholder="Internal Marks">
+
+            <input
+                    type="number"
+                    id="externalMarks"
+                    placeholder="External Marks">
+
+        </div>
+
+        <br>
+
+        <button onclick="saveMarks()">
+            Save Marks
+        </button>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>Marks List</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Student</th>
+                <th>Course</th>
+                <th>Internal</th>
+                <th>External</th>
+                <th>Total</th>
+                <th>Grade</th>
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="marksTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/marks.js"></script>
+
+</body>
+
+</html>

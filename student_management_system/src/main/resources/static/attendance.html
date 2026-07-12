@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Attendance Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>SMS</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+
+    <a href="students.html">🎓 Students</a>
+
+    <a href="faculty.html">👨‍🏫 Faculty</a>
+
+    <a href="courses.html">📚 Courses</a>
+
+    <a href="attendance.html" class="active">📅 Attendance</a>
+
+    <a href="marks.html">📝 Marks</a>
+
+</div>
+
+<div class="content">
+
+    <h1>Attendance Management</h1>
+
+    <div class="form-container">
+
+        <h2>Mark Attendance</h2>
+
+        <div class="form-grid">
+
+            <input
+                    type="number"
+                    id="studentId"
+                    placeholder="Student ID">
+
+            <input
+                    type="number"
+                    id="courseId"
+                    placeholder="Course ID">
+
+            <input
+                    type="date"
+                    id="attendanceDate">
+
+            <select id="status">
+
+                <option value="Present">Present</option>
+
+                <option value="Absent">Absent</option>
+
+            </select>
+
+        </div>
+
+        <br>
+
+        <button onclick="saveAttendance()">
+            Save Attendance
+        </button>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>Attendance List</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Student</th>
+
+                <th>Course</th>
+
+                <th>Date</th>
+
+                <th>Status</th>
+
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="attendanceTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/attendance.js"></script>
+
+</body>
+</html>

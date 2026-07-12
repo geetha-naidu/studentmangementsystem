@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- ================= Sidebar ================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h2>🎓 SMS</h2>
+
+        <p>Student Management System</p>
+
+    </div>
+
+    <a href="dashboard.html" class="active">🏠 Dashboard</a>
+
+    <a href="students.html">🎓 Students</a>
+
+    <a href="faculty.html">👨‍🏫 Faculty</a>
+
+    <a href="courses.html">📚 Courses</a>
+
+    <a href="attendance.html">📅 Attendance</a>
+
+    <a href="marks.html">📝 Marks</a>
+
+</div>
+
+<!-- ================= Main Content ================= -->
+
+<div class="content">
+
+    <h1>Student Management System Dashboard</h1>
+
+    <!-- Dashboard Cards -->
+
+    <div class="dashboard">
+
+        <div class="card students">
+
+            <h3>Total Students</h3>
+
+            <p id="studentsCount">0</p>
+
+        </div>
+
+        <div class="card faculty">
+
+            <h3>Total Faculty</h3>
+
+            <p id="facultyCount">0</p>
+
+        </div>
+
+        <div class="card courses">
+
+            <h3>Total Courses</h3>
+
+            <p id="coursesCount">0</p>
+
+        </div>
+
+        <div class="card attendance">
+
+            <h3>Attendance</h3>
+
+            <p id="attendanceCount">0</p>
+
+        </div>
+
+        <div class="card marks">
+
+            <h3>Marks</h3>
+
+            <p id="marksCount">0</p>
+
+        </div>
+
+        <div class="card departments">
+
+            <h3>Departments</h3>
+
+            <p id="departmentCount">0</p>
+
+        </div>
+
+    </div>
+
+    <!-- Recent Students -->
+
+    <div class="table-container">
+
+        <h2>Recent Students</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Department</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="recentStudents">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

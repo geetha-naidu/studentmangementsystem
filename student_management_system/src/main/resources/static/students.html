@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h2>🎓 SMS</h2>
+
+        <p>Student Management System</p>
+
+    </div>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+
+    <a href="students.html" class="active">🎓 Students</a>
+
+    <a href="faculty.html">👨‍🏫 Faculty</a>
+
+    <a href="courses.html">📚 Courses</a>
+
+    <a href="attendance.html">📅 Attendance</a>
+
+    <a href="marks.html">📝 Marks</a>
+
+</div>
+
+<!-- Content -->
+
+<div class="content">
+
+    <h1>Student Management</h1>
+
+    <div class="form-container">
+
+        <h2>Add / Update Student</h2>
+
+        <div class="form-grid">
+
+            <input type="text"
+                   id="rollNumber"
+                   placeholder="Roll Number">
+
+            <input type="text"
+                   id="firstName"
+                   placeholder="First Name">
+
+            <input type="text"
+                   id="lastName"
+                   placeholder="Last Name">
+
+            <select id="gender">
+
+                <option value="">Select Gender</option>
+
+                <option value="Male">Male</option>
+
+                <option value="Female">Female</option>
+
+            </select>
+
+            <input type="date"
+                   id="dateOfBirth">
+
+            <input type="email"
+                   id="email"
+                   placeholder="Email">
+
+            <input type="text"
+                   id="phone"
+                   placeholder="Phone">
+
+            <input type="text"
+                   id="address"
+                   placeholder="Address">
+
+            <input type="text"
+                   id="department"
+                   placeholder="Department">
+
+            <input type="number"
+                   id="yearOfStudy"
+                   placeholder="Year Of Study">
+
+
+
+        </div>
+
+        <br>
+
+        <button onclick="addStudent()">
+            Save Student
+        </button>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>Student List</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Roll No</th>
+
+                <th>Name</th>
+
+                <th>Department</th>
+
+                <th>Year</th>
+
+                <th>Email</th>
+
+                <th>Phone</th>
+
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="studentTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/students.js"></script>
+
+</body>
+
+</html>
